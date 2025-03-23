@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/center_layout.dart';
+import 'package:flutterapp/list.dart';
+import 'package:flutterapp/vert_hori_layout.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,8 +12,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Teste'))),
+    return MaterialApp(
+      debugShowCheckedModeBanner:
+          false, // This removes that annoying 'debug' thingy
+      home: Scaffold(body: MyList()),
     );
   }
 }
